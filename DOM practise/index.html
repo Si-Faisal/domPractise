@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practise</title>
+</head>
+<body>
+    <h1>My First DOM Practise Website</h1>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui quam ullam reiciendis totam minima maxime neque dolores consequatur sequi?</p>
+
+  <section>
+    <h2 id="FruitsHeader">My Favarite Fruits</h2>
+
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>PineApple</li>
+        <li>Goava</li>
+        <li>lichi</li>
+    </ul>
+  </section>
+
+  <section id="place-section">
+    <h2 id="placeTitle">My Favarite Places</h2>
+
+    <ul>
+        <li class="placeLi">Cox'sBazer</li>
+        <li class="placeLi">Sylet</li>
+        <li class="placeLi">Dhaka</li>
+        <li class="placeLi">Narayangong</li>
+        
+    </ul>
+   </section>
+
+   <section id="Friends-section">
+    <h2 id="friendsTitle">My Favarite Friends</h2>
+
+    <h2>Difference Betwwen querySelector and querySelectorAll</h2>
+    <blockquote>
+        <cite>
+            finding  html Element by quearyselector like as getElementById,getElementsByClass ,getElementsByClassName ,getElementsByTagName 
+        Now here describing the core differnce about quearyselector and querySelectorAll. <br>
+        <strong id="strongText">
+            <q>querySelectorAll is used for finding all childelement and the querySelector is used for only find the firstChild of the parent.</q> 
+        </strong>
+        </cite>
+    </blockquote>
+    <figcaption>
+        &mdash; Jeremy Keith, <cite>Shahidul Islam Faisal</cite>  </figcaption>
+    </figure>
+
+    <ul id="ullist" class="sadman nahin rocky sajid">
+        <li class="friendName">Sadman</li>
+        <li class="friendName">Salib</li>
+        <li class="friendName">Rocky</li>
+        <li class="friendName">Nahin</li>
+        
+    </ul>
+   </section>
+
+    <h2>Color Web Page</h2>
+    <button id="red" onclick="btnred">Click To red</button>
+    <button>Click To yellow</button>
+    <button>Click To Black</button>
+    <button>Click To Pink</button>
+     
+    <script src="js/index.js"></script>
+    <script>
+        // using javascript add or remove class value
+        const lilistsIs = document.getElementById('ullist');
+       const newclss= lilistsIs.classList.add('Faisal') ;
+       const removecls = lilistsIs.classList.remove ('nahin');
+       console.log(lilistsIs);
+    //    const ullist = document.getElementsByClassName('allUl');
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="h-screen  bg-zinc-900 flex justify-center items-center">
+        <div class="h-4/5 w-4/5 bg-orange-500 flex flex-col justify-center items-center rounded-md">
+            <div class="w-full flex flex-wrap justify-between items-center rounded-tl-md rounded-tr-md p-5">
+                <div class="flex">
+                    <button id="bold-btn" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_bold_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="italic-btn" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_italic_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="underLine-btn" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_underlined_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                </div>
+
+                <div class="flex">
+                    <button id="align-left" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_align_left_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="align-center" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_align_center_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="align-right" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_align_right_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="align-justify" class="w-10 hover:bg-white rounded-md p-2"><img src="assets/icons/format_align_justify_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                </div>
+
+                <div class="flex">
+                    <button id="font-size" class="w-16 hover:bg-white rounded-md p-2"><input class="w-full pl-2 rounded" type="number" min="21" placeholder="21"></button>
+                    <button id="font-capitalization" class="w-10 hover:bg-white rounded-md p-2 font-bold">aA</button>
+                    <button id="font-color" class="w-16 hover:bg-white rounded-md p-2"><input class="w-full rounded" type="color" oninput="changeColor(event)"></button>
+                </div>
+            </div>
+            
+            <textarea class="w-full h-full p-5 rounded-bl-md rounded-br-md" id="text-editor" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+
+    <script src="js/editor2.js"></script>
+</body>
+</html>

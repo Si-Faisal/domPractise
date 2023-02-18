@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using javascript for parentNodes creatElement childNodes</title>
+</head>
+<body>
+    <section id="parenID">
+        <h2>My Favourite Places</h2>
+        <ul id="listGroup">
+            <li>Cox'sBazer</li>
+            <li>Chittagong</li>
+            <li>Dhaka</li>
+            <li>Sylhet</li>
+            <li>Cu Campus</li>
+            <li>My Home Place</li>
+        </ul>
+    </section>
+
+    <!-- <button onclick="document.body.style.backgroundColor='red'">click here to red</button> -->
+    <!-- first step using document in the html tag -->
+    <button onclick="document.body.style.backgroundColor='red'">click here to red</button>
+
+    <!-- using javascript step2 -->
+    <button onclick="makeBlue()">click here to blue</button>
+    <!-- step3 using javascript  -->
+    <button id="pink">click here to pink</button>
+
+    <!-- step 4  -->
+    <button id="magenta" >click here to magenta</button>
+    <!-- step 5 using addEventListner -->
+    <button id="green">click here to green</button>
+    <!--     step 6 -->
+    <button id="purple">click here to purple</button>
+    <!-- step 7 -->
+    
+    <button id="sandybrown">click here to sandybrown</button>
+
+
+   <script>
+    const Findparent = document.getElementById('parenID');
+
+    const newSection = document.createElement('h2');
+    newSection.innerHTML= ('My favourite Foods') ;
+    Findparent.appendChild(newSection);
+
+    const newUL = document.createElement('ul');
+    
+    Findparent.appendChild(newUL);
+    
+    const newli1 = document.createElement('li');
+    newli1.innerHTML= ('kacchi') ;
+    newUL.appendChild(newli1);
+    const newli2 = document.createElement('li');
+    newli2.innerHTML= ('Biriyani') ;
+    newUL.appendChild(newli2);
+
+    const newli3 = document.createElement('li');
+    newli3.innerHTML= ('mezzan') ;
+    newUL.appendChild(newli3);
+// step 2 to background color change...
+    function makeBlue(){
+        document.body.style.backgroundColor= 'blue';
+    }
+
+    //step 3 to onclick to background color  change...
+    const buttonPink = document.getElementById('pink');
+    buttonPink.onclick= toPink ;
+
+    function toPink(){
+        document.body.style.backgroundColor = 'pink';
+    }
+
+    //step4 changing background color
+    const magenta = document.getElementById('magenta');
+    magenta.onclick= function(){
+        document.body.style.backgroundColor = 'magenta';
+    }
+
+    //step 5 changing backgrond color
+    const green  = document.getElementById('green');
+    green.addEventListener('click' , ToGreen) ;
+    function ToGreen(){
+        document.body.style.backgroundColor = 'green';
+    }
+
+    //step 6 changing background color
+
+    const  Topurple =  document.getElementById('purple');
+    Topurple.addEventListener('click'  , function  makePurple(){
+        document.body.style.backgroundColor = 'purple';
+    })
+
+    //step 7 changing background color
+
+    document.getElementById('sandybrown').addEventListener('click' , function makeSandybrown(){
+        document.body.style.backgroundColor = 'sandybrown';
+    })
+
+   </script> 
+</body>
+</html>

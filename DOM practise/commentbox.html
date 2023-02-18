@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentBox to comment</title>
+</head>
+<body>
+
+   <section id="main-section">
+    <h1>Plz Comment below about your status</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam. Excepturi vel sunt dolores esse non natus illo minus illum numquam maxime, cum, reprehenderit obcaecati nostrum, sed iure eveniet. Adipisci.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam. Excepturi vel sunt dolores esse non natus illo minus illum numquam maxime, cum, reprehenderit obcaecati nostrum, sed iure eveniet. Adipisci.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laboriosam. Excepturi vel sunt dolores esse non natus illo minus illum numquam maxime, cum, reprehenderit obcaecati nostrum, sed iure eveniet. Adipisci.</p>
+   </section>
+    <textarea name="" id="commentBox" cols="30" rows="10"></textarea> <br>
+    <button id="btnComment">Comment</button>
+    <script>
+        
+        
+        
+        document.getElementById('btnComment').addEventListener('click' , function(){
+           const testField = document.getElementById('commentBox')
+           const ValueField = testField.value ;
+
+           const postarea = document.getElementById('main-section');
+           const p = document.createElement('p');
+           p.innerText = ValueField ;
+           postarea.appendChild(p);
+        })
+
+    </script>
+</body>
+</html>
